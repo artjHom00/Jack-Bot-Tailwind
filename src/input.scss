@@ -4,6 +4,7 @@
 
 $white-color: #FFF5EA;
 $beige-color: #F0CBA2;
+$beige2-color: #AAA49D;
 $yellow-color: #F1AC1D;
 $black-color: #1E110D;
 $brown-color: #52433F;
@@ -13,6 +14,14 @@ $red-color: #C33F34;
 body, * {
     margin: 0;
     padding: 0;
-    background-color: $white-color;
-    font-family: 'Inter', sans-serif;
+}
+
+* { 
+    font-family: 'Inter', sans-serif !important;
+}
+
+.testimonial {
+    -webkit-box-shadow: 24px 22px 0px 0px rgba(82,67,63,1);
+    -moz-box-shadow: 24px 22px 0px 0px rgba(82,67,63,1);
+    box-shadow: 24px 22px 0px 0px rgba(82,67,63,1);
 }
