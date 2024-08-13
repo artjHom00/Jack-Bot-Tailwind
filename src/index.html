@@ -12,7 +12,67 @@
 </head>
 
 <body class="bg-figmawhite max-w-screen-4xl mx-auto">
-    <div class="overflow-hidden">
+    <div class="overflow-hidden relative">
+
+
+        <!-- Jack Bot Chat Modal -->
+        <div class="absolute w-full h-screen bg-figmablack bg-opacity-45 z-40">
+            <div class="bg-figmawhite max-w-4xl absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-10 lg:w-3/4 rounded-3xl">
+                <div class="flex items-center w-full justify-between">
+                    <h3 class="text-3xl text-figmablack"><b>Jack</b> Bot</h3>
+                    <button class="btn-outline py-3 px-8 bg-figmablack text-white border rounded-full">Clear chat</button>
+                </div>
+
+
+                <div class="h-96 overflow-scroll mt-14 flex flex-col gap-6">
+                    <div class="flex gap-4">
+                        <div>
+                            <img src="../assets/images/chat-avatars/Mask group.png" alt="">
+                        </div>
+                        <div class="bg-figmalightbrown text-figmawhite p-3 rounded-xl w-full">
+                            Hello Anna! <br>
+                            How can I help to you?
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex gap-4">
+                            <div class="bg-figmabeigelight text-figmablack p-3 rounded-xl w-full flex gap-8">
+                                <div class="w-fit">
+                                    Lorem ipsum dolor sit amet consectetur. Duis sed habitasse aliquet nunc leo non. Interdum erat pretium metus viverra neque. Amet tellus rutrum ipsum est eget. In euismod in volutpat.
+                                </div>
+                                <div class="w-6">
+                                    <img src="../assets/images/icons/edit.svg" class="w-full" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <img src="../assets/images/chat-avatars/Avatar Style 6.png" alt="">
+                            </div>
+                        </div>
+                        <div class="flex mt-4 space-x-4">
+                            <button class="bg-figmabeigelight2 rounded-2xl py-4 px-5">
+                                prompt example
+                            </button>
+                            <button class="bg-figmabeigelight2 rounded-2xl py-4 px-5">
+                                prompt example
+                            </button>
+                            <button class="bg-figmabeigelight2 rounded-2xl py-4 px-5">
+                                prompt example
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mt-4 lg:mt-8 relative">
+                    <input type="text" class="px-8 py-4 w-full max-h-14 border border-figmayellow bg-figmawhite text-figmabrown rounded-full" placeholder="Enter your message...">
+                    <button class="bg-figmayellow h-14 absolute w-14 right-0 text-center text-white rounded-full"><img src="../assets/images/icons/arrow-black.svg" class="text-center mx-auto" alt=""></button>
+                </div>
+
+            </div>
+        </div>
+        
+        
         <div class="top-0 z-0 absolute left-0">
             <img class="w-48 lg:w-full" src="../assets/images/hero/lines-hero.svg" alt="">
         </div>
@@ -309,7 +369,7 @@
                 </div>
                 <div class="contact-us mt-8 p-6 lg:p-14 bg-figmared rounded-3xl">
                     <div class="flex-col lg:flex-row flex items-end justify-between">
-                        <div class="mt-6 order-last lg:mt-0 lg:text-lg text-figmawhite w-full lg:w-1/2">
+                        <div class="mt-6 order-last lg:order-first lg:mt-0 lg:text-lg text-figmawhite w-full lg:w-1/2">
                             <p>Info@askjackbot.com</p>
                             <p>+37430830986</p>
                         </div>
