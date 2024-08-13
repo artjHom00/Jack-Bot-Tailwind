@@ -7,6 +7,7 @@ module.exports = {
         'figmawhite': '#FFF5EA',
         'figmabeige': '#F0CBA2',
         'figmabeige2': '#AAA49D',
+        'figmabeigelight': '#F9E4CD',
         'figmayellow': '#F1AC1D',
         'figmablack': '#1E110D',
         'figmabrown': '#52433F',

@@ -8,14 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="./output.css" rel="stylesheet">
 </head>
 
 <body class="bg-figmawhite max-w-screen-4xl mx-auto">
     <div class="overflow-hidden">
-        <div class="top-0 absolute left-0">
-            <img src="../assets/images/hero/lines-hero.svg" alt="">
+        <div class="top-0 z-0 absolute left-0">
+            <img class="w-48 lg:w-full" src="../assets/images/hero/lines-hero.svg" alt="">
         </div>
         <nav class="hidden max-w-screen-md xl:flex mx-auto justify-center mt-14">
             <div class="bg-figmablack flex text-figmawhite rounded-full">
@@ -26,64 +25,103 @@
             </div>
             <button class="btn-outline ml-6 py-3 px-8 border-figmablack border rounded-full">Sign In</button>
         </nav>
+        <nav class="z-30 relative bg-figmablack lg:hidden">
+            <div class="py-4 px-8 w-full flex justify-between ">
+                <button class="btn-outline py-3 px-8 border-figmawhite text-white border rounded-full">Sign In</button>
+                <button><img src="../assets/images/nav-icon.svg" alt=""></button>
+            </div>
+        </nav>
         <section class="hero text-center mt-16 relative">
-            <div class="absolute -bottom-24 -right-0 -z-10">
-                <img src="../assets/images/hero/plane-hero.svg" alt="">
+            <div class="absolute -bottom-40 lg:-bottom-24 -right-0 -z-10">
+                <img class="w-40 lg:w-full" src="../assets/images/hero/plane-hero.svg" alt="">
             </div>
             <h1 class="text-5xl xl:text-9xl text-figmablack">Travel Inclusively,<br> Dream Freely</h1>
-            <p class="xl:text-lg mt-4 text-figmabrown">Empowering Every Traveler: <br>Accessible, Tailored Journeys for Special Needs</p>
+            <p class="mx-auto max-w-60 lg:max-w-full xl:text-lg mt-4 text-figmabrown">Empowering Every Traveler: <br>Accessible, Tailored Journeys for Special Needs</p>
             <button class="text-lg bg-figmayellow px-8 py-3 mt-10 text-figmablack rounded-full">Plan your accessible trip now</button>
         </section>
-        <section class="mx-8 xl:mx-14 rounded-3xl banner mt-20 bg-figmabeige relative">
-            <div class="absolute flex flex-col gap-6" style="top: 7%; left: 3%;">
-                <div class="bg-figmawhite bg-opacity-80 max-w-96 p-6 rounded-2xl">
-                    <h4 class="text-2xl text-figmablack">Planning Your Trip</h4>
-                    <p class="mt-4 2xl:text-lg text-figmabrown">"I'm planning a trip to Rome from July 15th to July 20th. Can you suggest accessible accommodations and must-see attractions?"</p>
-                </div>
-                <div class="bg-figmawhite bg-opacity-80 max-w-96 p-6 rounded-2xl">
-                    <p class="2xl:text-lg text-figmabrown">"I'm visually impaired and need assistance finding guided tours in London that cater to my needs. Can you help?"</p>
-                </div>
-                <div class="bg-figmawhite bg-opacity-80 max-w-96 p-6 rounded-2xl">
-                    <h4 class="text-2xl text-figmablack">Booking and Payment</h4>
-                    <p class="mt-4 2xl:text-lg text-figmabrown">"Can you book a round-trip flight from San Francisco to Tokyo for me?"</p>
+        <section class="mx-8 xl:mx-14 rounded-3xl banner mt-10 pt-0 lg:mt-20 lg:pt-36 xl:pt-14 2xl:pt-0 lg:bg-figmabeige relative">
+            <div class="block lg:hidden">
+                <img src="../assets/images/jack-m.png" class="w-full" alt="">
+                <div class="tips-mobile mt-10">
+                    <h3 class="text-figmablack text-3xl text-left">Tips</h3>
+                    <div class="mt-6 flex flex-col gap-4">
+                        <div class="bg-figmabeigelight bg-opacity-80 max-w-96 p-6 rounded-2xl">
+                            <h4 class="2xl:text-2xl text-figmablack">Planning Your Trip</h4>
+                            <p class="mt-4 2xl:text-lg text-figmabrown">"I'm planning a trip to Rome from July 15th to July 20th. Can you suggest accessible accommodations and must-see attractions?"</p>
+                        </div>
+                        <div class="bg-figmabeigelight bg-opacity-80 max-w-96 p-6 rounded-2xl">
+                            <h4 class="2xl:text-2xl text-figmablack">Booking and Payment</h4>
+                            <p class="mt-4 2xl:text-lg text-figmabrown">"Can you book a round-trip flight from San Francisco to Tokyo for me?"</p>
+                        </div>
+                        <div class="bg-figmabeigelight bg-opacity-80 max-w-96 p-6 rounded-2xl">
+                            <h4 class="2xl:text-2xl text-figmablack">Emergency Support</h4>
+                            <p class="mt-4 2xl:text-lg text-figmabrown">"I lost my passport in London. What should I do?"</p>
+                        </div>
+                        <div class="bg-figmabeigelight bg-opacity-80 max-w-96 p-6 rounded-2xl">
+                            <h4 class="2xl:text-2xl text-figmablack">Navigation</h4>
+                            <p class="mt-4 2xl:text-lg text-figmabrown">"Can you provide walking directions from my hotel to the Colosseum?"
+                                "What's the best way to get from JFK Airport to Manhattan using public transit?"</p>
+                        </div>
+                        <div class="bg-figmabeigelight bg-opacity-80 max-w-96 p-6 rounded-2xl">
+                            <p class="2xl:text-lg text-figmabrown">"I'm visually impaired and need assistance finding guided tours in London that cater to my needs. Can you help?"</p>
+                        </div>
+                        <div class="bg-figmabeigelight bg-opacity-80 max-w-96 p-6 rounded-2xl">
+                            <p class="2xl:text-lg text-figmabrown">"I have mobility challenges and I'm planning a trip to the Grand Canyon. Can you recommend accessible viewpoints and trails?"</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <img class="rounded-3xl" src="../assets/images/jack.png" alt="">
-            <div class="absolute flex flex-col gap-6" style="bottom: 7%; right: 3%;">
-                <div class="bg-figmawhite bg-opacity-80 max-w-96 p-6 rounded-2xl">
-                    <h4 class="text-2xl text-figmablack">Emergency Support</h4>
-                    <p class="mt-4 2xl:text-lg text-figmabrown">"I lost my passport in London. What should I do?"</p>
+            <div class="hidden lg:block">
+                <div class="absolute flex flex-col gap-6" style="top: 7%; left: 3%;">
+                    <div class="bg-figmawhite bg-opacity-80 max-w-96 p-6 rounded-2xl">
+                        <h4 class="2xl:text-2xl text-figmablack">Planning Your Trip</h4>
+                        <p class="mt-4 2xl:text-lg text-figmabrown">"I'm planning a trip to Rome from July 15th to July 20th. Can you suggest accessible accommodations and must-see attractions?"</p>
+                    </div>
+                    <div class="bg-figmawhite bg-opacity-80 lg max-w-96 p-6 rounded-2xl">
+                        <p class="2xl:text-lg text-figmabrown">"I'm visually impaired and need assistance finding guided tours in London that cater to my needs. Can you help?"</p>
+                    </div>
+                    <div class="bg-figmawhite bg-opacity-80 max-w-96 p-6 rounded-2xl">
+                        <h4 class="2xl:text-2xl text-figmablack">Booking and Payment</h4>
+                        <p class="mt-4 2xl:text-lg text-figmabrown">"Can you book a round-trip flight from San Francisco to Tokyo for me?"</p>
+                    </div>
                 </div>
-                <div class="bg-figmawhite bg-opacity-80 max-w-96 p-6 rounded-2xl">
-                    <h4 class="text-2xl text-figmablack">Navigation</h4>
-                    <p class="mt-4 2xl:text-lg text-figmabrown">"Can you provide walking directions from my hotel to the Colosseum?"
-                        "What's the best way to get from JFK Airport to Manhattan using public transit?"</p>
-                </div>
-                <div class="bg-figmawhite bg-opacity-80 max-w-96 p-6 rounded-2xl">
-                    <p class="2xl:text-lg text-figmabrown">"I have mobility challenges and I'm planning a trip to the Grand Canyon. Can you recommend accessible viewpoints and trails?"</p>
+                <img class="rounded-3xl" src="../assets/images/jack.png" alt="">
+                <div class="absolute flex flex-col gap-6" style="bottom: 7%; right: 3%;">
+                    <div class="bg-figmawhite bg-opacity-80 max-w-96 p-6 rounded-2xl">
+                        <h4 class="2xl:text-2xl text-figmablack">Emergency Support</h4>
+                        <p class="mt-4 2xl:text-lg text-figmabrown">"I lost my passport in London. What should I do?"</p>
+                    </div>
+                    <div class="bg-figmawhite bg-opacity-80 max-w-96 p-6 rounded-2xl">
+                        <h4 class="2xl:text-2xl text-figmablack">Navigation</h4>
+                        <p class="mt-4 2xl:text-lg text-figmabrown">"Can you provide walking directions from my hotel to the Colosseum?"
+                            "What's the best way to get from JFK Airport to Manhattan using public transit?"</p>
+                    </div>
+                    <div class="bg-figmawhite bg-opacity-80 max-w-96 p-6 rounded-2xl">
+                        <p class="2xl:text-lg text-figmabrown">"I have mobility challenges and I'm planning a trip to the Grand Canyon. Can you recommend accessible viewpoints and trails?"</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="mx-8 xl:mx-14 partners mt-32 text-center">
-            <h3 class="text-3xl text-figmablack">Trusted by Accessibility Leaders</h3>
-            <div class="flex justify-around mt-12 space-x-12 xl:space-x-0 overflow-x-auto">
-                <img src="../assets/images/partners/logo-white 3.svg" alt="">
-                <img src="../assets/images/partners/Mask group.svg" alt="">
-                <img src="../assets/images/partners/Mask group-1.svg" alt="">
-                <img src="../assets/images/partners/Mask group-2.svg" alt="">
-                <img src="../assets/images/partners/Mask group-3.svg" alt="">
-                <img src="../assets/images/partners/Mask group-4.svg" alt="">
-                <img src="../assets/images/partners/Mask group-5.svg" alt="">
-                <img src="../assets/images/partners/logo-freetour 1.svg" alt="">
+        <section class="ml-8 xl:mx-14 partners mt-14 lg:mt-32 text-center">
+            <h3 class="text-xl lg:text-3xl text-figmablack">Trusted by Accessibility Leaders</h3>
+            <div class="flex justify-around mt-10 lg:mt-12 space-x-12 xl:space-x-0 overflow-x-auto">
+                <img class="h-10 lg:w-full" src="../assets/images/partners/logo-white 3.svg" alt="">
+                <img class="h-10 lg:w-full" src="../assets/images/partners/Mask group.svg" alt="">
+                <img class="h-10 lg:w-full" src="../assets/images/partners/Mask group-1.svg" alt="">
+                <img class="h-10 lg:w-full" src="../assets/images/partners/Mask group-2.svg" alt="">
+                <img class="h-10 lg:w-full" src="../assets/images/partners/Mask group-3.svg" alt="">
+                <img class="h-10 lg:w-full" src="../assets/images/partners/Mask group-4.svg" alt="">
+                <img class="h-10 lg:w-full" src="../assets/images/partners/Mask group-5.svg" alt="">
+                <img class="h-10 lg:w-full" src="../assets/images/partners/logo-freetour 1.svg" alt="">
             </div>
         </section>
-        <section class="mx-8 xl:mx-14 about block space-y-16 xl:flex xl:space-x-14 xl:space-y-0 justify-between mt-36">
-            <div class="banners flex flex-col space-y-8 w-full xl:w-1/2 h-full">
-                <div class="relative">
+        <section class="mx-8 xl:mx-14 about block space-y-16 xl:flex xl:space-x-14 xl:space-y-0 justify-between mt-14 lg:mt-36">
+            <div class="banners flex flex-col space-y-4 lg:space-y-8 w-full xl:w-1/2 h-full">
+                <div class="hidden lg:block relative">
                     <img src="../assets/images/about/phone-screen.png" class="absolute" style="left: 38.7%; bottom: 1.7%; width: 9.5%;" alt="">
                     <img src="../assets/images/about/banner-top-minified.svg" alt="">
                 </div>
-                <div class="relative">
+                <div class="hidden lg:block relative">
                     <img src="../assets/images/about/banner-bottom.svg" alt="">
                     <div class="bg-figmawhite absolute flex py-2 px-6 rounded-full gap-4" style="right: 5%; bottom: 20%;">
                         <img src="../assets/images/about/socials/ic_baseline-telegram.svg" alt="">
@@ -93,9 +131,25 @@
                         <img src="../assets/images/about/socials/mdi_linkedin.svg" alt="">
                     </div>
                 </div>
+
+
+                <div class="block lg:hidden relative">
+                    <img src="../assets/images/about/phone-screen.png" class="hidden lg:block absolute" style="left: 38.7%; bottom: 1.7%; width: 9.5%;" alt="">
+                    <img src="../assets/images/about/banner-top-m.svg" class="w-full" alt="">
+                </div>
+                <div class="block lg:hidden relative">
+                    <img src="../assets/images/about/banner-bottom-m.svg" class="w-full" alt="">
+                    <div class="bg-figmawhite absolute flex py-2 px-6 rounded-full gap-4 w-max" style="left: 50%; bottom: 20%; transform: translateX(-50%)">
+                        <img src="../assets/images/about/socials/ic_baseline-telegram.svg" alt="">
+                        <img src="../assets/images/about/socials/teenyicons_instagram-solid.svg" alt="">
+                        <img src="../assets/images/about/socials/teenyicons_instagram-solid-1.svg" alt="">
+                        <img src="../assets/images/about/socials/ri_whatsapp-fill.svg" alt="">
+                        <img src="../assets/images/about/socials/mdi_linkedin.svg" alt="">
+                    </div>
+                </div>
             </div>
             <div class="about relative bg-figmablack rounded-3xl w-full xl:w-1/2">
-                <div class="px-14 py-12 2xl:py-24 flex flex-col align-middle h-full justify-center">
+                <div class="px-6 lg:px-14 py-8 lg:py-12 2xl:py-24 flex flex-col align-middle h-full justify-center">
                     <h3 class="text-figmawhite text-3xl xl:text-6xl">About our <span class="text-figmayellow">agency</span></h3>
                     <p class="text-lg 2xl:text-2xl max-w-3xl text-figmabeige2 mt-10">At Jack Bot, we empower individuals with special needs to travel confidently and inclusively. Through AI solutions and community support, we revolutionize accessibility in travel, advocating for equal opportunities and fostering inclusivity worldwide.</p>
                     <div class="mt-8 2xl:mt-24 flex space-x-4 2xl:space-x-12">
@@ -116,99 +170,99 @@
         </section>
         <section class="mx-8 xl:mx-14 section block xl:flex mt-14 items-center">
             <div class="how-we-work w-full xl:w-1/2 max-w-2xl mx-auto">
-                <h3 class="text-figmablack text-6xl">How we <span class="text-figmayellow">work</span></h3>
-                <p class="mt-10 text-2xl text-figmabrown">Our dedicated bot makes personalized itineraries that cater to your specific needs, ensuring every destination is accessible and enjoyable</p>
-                <div class="flex items-start mt-14 space-x-8">
+                <h3 class="text-figmablack text-3xl lg:text-6xl">How we <span class="text-figmayellow">work</span></h3>
+                <p class="mt-4 lg:mt-10 lg:text-2xl text-figmabrown">Our dedicated bot makes personalized itineraries that cater to your specific needs, ensuring every destination is accessible and enjoyable</p>
+                <div class="flex items-start mt-8 lg:mt-14 space-x-8">
                     <img src="../assets/images/icons/Layer_1.svg" alt="">
                     <div>
-                        <p class="text-3xl text-figmablack">AI Personalization</p>
-                        <p class="text-2xl text-figmabrown mt-6">Our AI-driven itineraries adapt to your preferences, ensuring a hassle-free travel experience tailored to your needs</p>
+                        <p class="text-xl lg:text-3xl text-figmablack">AI Personalization</p>
+                        <p class="lg:text-2xl text-figmabrown mt-4 lg:mt-6">Our AI-driven itineraries adapt to your preferences, ensuring a hassle-free travel experience tailored to your needs</p>
                     </div>
                 </div>
-                <div class="flex items-start mt-14 space-x-8">
+                <div class="flex items-start mt-6 lg:mt-14 space-x-8">
                     <img src="../assets/images/icons/Frame 71.svg" alt="">
                     <div>
-                        <p class="text-3xl text-figmablack">Real-Time Assistance</p>
-                        <p class="text-2xl text-figmabrown mt-6">Receive live updates and assistance during your journey to handle unexpected situations promptly</p>
+                        <p class="text-xl lg:text-3xl text-figmablack">Real-Time Assistance</p>
+                        <p class="lg:text-2xl text-figmabrown mt-4 lg:mt-6">Receive live updates and assistance during your journey to handle unexpected situations promptly</p>
                     </div>
                 </div>
-                <div class="flex items-start mt-14 space-x-8">
+                <div class="flex items-start mt-6 lg:mt-14 space-x-8">
                     <img src="../assets/images/icons/Frame 71-1.svg" alt="">
                     <div>
-                        <p class="text-3xl text-figmablack">Seamless Integration</p>
-                        <p class="text-2xl text-figmabrown mt-6">Effortlessly sync your travel plans with our app, making it easy to manage bookings and schedules</p>
+                        <p class="text-xl lg:text-3xl text-figmablack">Seamless Integration</p>
+                        <p class="lg:text-2xl text-figmabrown mt-4 lg:mt-6">Effortlessly sync your travel plans with our app, making it easy to manage bookings and schedules</p>
                     </div>
                 </div>
             </div>
-            <div class="testimonials flex flex-col space-y-8 w-full xl:w-1/2">
-                <div class="testimonial bg-figmawhite rounded-3xl p-14">
+            <div class="testimonials mt-14 lg:mt-0 flex flex-col space-y-8 w-full xl:w-1/2">
+                <div class="testimonial bg-figmawhite rounded-3xl p-6 lg:p-14">
                     <div class="flex justify-between">
                         <div class="flex items-center space-x-6">
-                            <img src="../assets/images/icons/person.svg" class="w-16 h-16" alt="">
+                            <img src="../assets/images/icons/person.svg" class="w-7 lg:w-16" alt="">
                             <div>
-                                <p class="text-figmablack text-3xl">Sarah</p>
-                                <p class="text-figmabrown text-lg">Solo Traveler</p>
+                                <p class="text-figmablack text-xl lg:text-3xl">Sarah</p>
+                                <p class="text-figmabeige2 lg:text-figmabrown text-sm lg:text-lg">Solo Traveler</p>
                             </div>
                         </div>
                         <div class="flex space-x-0.5">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
                         </div>
                     </div>
                     <div>
-                        <p class="mt-8 text-2xl text-figmabrown">Sarah, a solo traveler with dietary restrictions, uses the virtual assistant to find restaurants that cater to her dietary needs and discover local food markets for fresh produce</p>
+                        <p class="mt-8 lg:text-2xl text-figmabrown">Sarah, a solo traveler with dietary restrictions, uses the virtual assistant to find restaurants that cater to her dietary needs and discover local food markets for fresh produce</p>
                     </div>
                 </div>
-                <div class="testimonial bg-figmawhite rounded-3xl p-14">
+                <div class="testimonial bg-figmawhite rounded-3xl p-6 lg:p-14">
                     <div class="flex justify-between">
                         <div class="flex items-center space-x-6">
-                            <img src="../assets/images/icons/person.svg" class="w-16 h-16" alt="">
+                            <img src="../assets/images/icons/person.svg" class="w-7 lg:w-16" alt="">
                             <div>
-                                <p class="text-figmablack text-3xl">John</p>
-                                <p class="text-figmabrown text-lg">Wheelchair User</p>
+                                <p class="text-figmablack text-xl lg:text-3xl">John</p>
+                                <p class="text-figmabeige2 lg:text-figmabrown text-sm lg:text-lg">Wheelchair User</p>
                             </div>
                         </div>
                         <div class="flex space-x-0.5">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
                         </div>
                     </div>
                     <div>
-                        <p class="mt-8 text-2xl text-figmabrown">John and his family found accessible accommodations and transportation options, making their vacation stress-free and enjoyable</p>
+                        <p class="mt-8 lg:text-2xl text-figmabrown">John and his family found accessible accommodations and transportation options, making their vacation stress-free and enjoyable</p>
                         </div>
                 </div>
-                <div class="testimonial bg-figmawhite rounded-3xl p-14">
+                <div class="testimonial bg-figmawhite rounded-3xl p-6 lg:p-14">
                     <div class="flex justify-between">
                         <div class="flex items-center space-x-6">
-                            <img src="../assets/images/icons/person.svg" class="w-16 h-16" alt="">
+                            <img src="../assets/images/icons/person.svg" class="w-7 lg:w-16" alt="">
                             <div>
-                                <p class="text-figmablack text-3xl">Emily</p>
-                                <p class="text-figmabrown text-lg">Senior Traveler</p>
+                                <p class="text-figmablack text-xl lg:text-3xl">Emily</p>
+                                <p class="text-figmabeige2 lg:text-figmabrown text-sm lg:text-lg">Senior Traveler</p>
                             </div>
                         </div>
                         <div class="flex space-x-0.5">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
-                            <img src="../assets/images/icons/star.svg" class="w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
+                            <img src="../assets/images/icons/star.svg" class="w-5 lg:w-7" alt="">
                         </div>
                     </div>
                     <div>
-                        <p class="mt-8 text-2xl text-figmabrown">Emily appreciated the real-time assistance, which helped her navigate the city and access medical services when needed</p>
+                        <p class="mt-8 lg:text-2xl text-figmabrown">Emily appreciated the real-time assistance, which helped her navigate the city and access medical services when needed</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="mx-8 xl:mx-14 ending flex space-x-14 mt-14">
-            <div class="gallery w-1/2">
-                <div class="max-w-screen-xl w-full mx-auto md:columns-2 lg:columns-3 xl:columns-3 space-y-3 md:space-y-8 md:gap-8">
+        <section class="mx-8 xl:mx-14 ending space-y-6 lg:flex lg:space-y-0 lg:space-x-14 mt-14">
+            <div class="gallery w-full lg:w-1/2">
+                <div class="hidden lg:block max-w-screen-xl w-full mx-auto columns-2 lg:columns-3 xl:columns-3 space-y-3 md:space-y-8 md:gap-8">
                     <div class="break-inside-avoid justify-center rounded-lg h-min">
                         <img src="../assets/images/gallery/Rectangle 22.jpg" class="rounded-3xl" alt="">
                     </div>
@@ -228,20 +282,40 @@
                         <img src="../assets/images/gallery/Rectangle 26.jpg" class="rounded-3xl" alt="">
                     </div>
                 </div>
+                <div class="block lg:hidden max-w-screen-xl w-full mx-auto columns-2 lg:columns-3 xl:columns-3 space-y-3 md:space-y-8 md:gap-8">
+                    <div class="break-inside-avoid justify-center rounded-lg h-min">
+                        <img src="../assets/images/gallery/Rectangle 22.jpg" class="rounded-3xl" alt="">
+                    </div>
+                    <div class="break-inside-avoid justify-center rounded-lg h-min">
+                        <img src="../assets/images/gallery/Rectangle 22-1.jpg" class="rounded-3xl" alt="">
+                    </div>
+                    <div class="break-inside-avoid justify-center rounded-lg h-min">
+                        <img src="../assets/images/gallery/Rectangle 26.jpg" class="rounded-3xl" alt="">
+                    </div>
+                    <div class="break-inside-avoid justify-center rounded-lg h-min">
+                        <img src="../assets/images/gallery/Rectangle 27.jpg" class="rounded-3xl" alt="">
+                    </div>
+                    <div class="break-inside-avoid justify-center rounded-lg h-min">
+                        <img src="../assets/images/gallery/Rectangle 25.jpg" class="rounded-3xl" alt="">
+                    </div>
+                    <div class="break-inside-avoid justify-center rounded-lg h-min">
+                        <img src="../assets/images/gallery/Rectangle 24.jpg" class="rounded-3xl" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="w-1/2">
+            <div class="w-full lg:w-1/2">
                 <div class="video">
                     <img src="../assets/images/video.png" class="rounded-3xl" alt="">
                 </div>
-                <div class="contact-us mt-8 p-14 bg-figmared rounded-3xl">
-                    <div class="flex items-end justify-between">
-                        <div class="text-lg text-figmawhite w-1/2">
+                <div class="contact-us mt-8 p-6 lg:p-14 bg-figmared rounded-3xl">
+                    <div class="flex-col lg:flex-row flex items-end justify-between">
+                        <div class="mt-6 order-last lg:mt-0 lg:text-lg text-figmawhite w-full lg:w-1/2">
                             <p>Info@askjackbot.com</p>
                             <p>+37430830986</p>
                         </div>
-                        <div class="text-right w-1/2">
-                            <h4 class="text-3xl text-figmawhite">Contact Us</h4>
-                            <div class="mt-8 relative">
+                        <div class="text-left lg:text-right w-full lg:w-1/2">
+                            <h4 class="text-xl lg:text-3xl text-figmawhite">Contact Us</h4>
+                            <div class="mt-4 lg:mt-8 relative">
                                 <input type="text" class="px-8 py-4 w-full max-w-96 max-h-14 bg-figmawhite text-figmabrown rounded-full" placeholder="Email">
                                 <button class="bg-figmablack h-14 absolute w-14 right-0 text-center text-white rounded-full"><img src="../assets/images/icons/ion_arrow-up-sharp.svg" class="text-center mx-auto" alt=""></button>
                             </div>
@@ -252,16 +326,16 @@
         </section>
     </div>
     <footer class="relative bg-figmablack mt-14">
-        <div class="absolute left-0 bottom-0">
+        <div class="w-28 lg:w-full absolute left-0 bottom-0">
             <img src="../assets/images/footer/Capa_2.svg" alt="">
         </div>
-        <div class="flex justify-between h-44 items-center mx-14">
+        <div class="flex justify-center lg:justify-between h-44 items-center mx-14">
             <div></div>
-            <div class="flex space-x-20 text-white text-lg">
+            <div class="text-center space-y-4 lg:flex lg:space-y-0 lg:space-x-20 text-white lg:text-lg">
                 <div>Accessibility Resources</div>
                 <div>Special Needs Travel Tips</div>
             </div>
-            <div class="flex space-x-6">
+            <div class="flex space-x-6 absolute right-8 -top-5 lg:relative">
                 <button class="w-14 h-14 rounded-full bg-figmayellow">
                     <img src="../assets/images/icons/oui_accessibility.svg" class="mx-auto" alt="">
                 </button>
@@ -269,12 +343,14 @@
                     <img src="../assets/images/icons/Vector.svg" class="mx-auto" alt="">
                 </button>
             </div>
-            <div class="absolute bottom-0" style="right: 11%;">
+            <div class="hidden lg:block absolute bottom-0" style="right: 11%;">
                 <img src="../assets/images/footer/Group 24.svg" alt="">
+            </div>
+            <div class="block lg:hidden absolute right-0 top-0">
+                <img src="../assets/images/footer/Capa_3.svg" alt="">
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 
 </html>

@@ -5,6 +5,7 @@
 $white-color: #FFF5EA;
 $beige-color: #F0CBA2;
 $beige2-color: #AAA49D;
+$beigelight-color: #F9E4CD;
 $yellow-color: #F1AC1D;
 $black-color: #1E110D;
 $brown-color: #52433F;
@@ -24,4 +25,14 @@ body, * {
     -webkit-box-shadow: 24px 22px 0px 0px rgba(82,67,63,1);
     -moz-box-shadow: 24px 22px 0px 0px rgba(82,67,63,1);
     box-shadow: 24px 22px 0px 0px rgba(82,67,63,1);
+}
+
+@media(max-width: 1024px) {
+    
+    .testimonial {
+        -webkit-box-shadow: 16px 18px 0px 0px rgba(82,67,63,1);
+        -moz-box-shadow: 16px 18px 0px 0px rgba(82,67,63,1);
+        box-shadow: 16px 18px 0px 0px rgba(82,67,63,1);
+    }
+
 }
