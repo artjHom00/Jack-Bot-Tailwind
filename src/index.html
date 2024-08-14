@@ -244,16 +244,16 @@
         </div>
         <nav class="hidden max-w-screen-md lg:flex mx-auto justify-center mt-14">
             <div class="bg-figmablack flex text-figmawhite rounded-full">
-                <div class="w-fit py-4 px-10 bg-figmayellow text-figmablack rounded-full">Home</div>
-                <div class="w-fit py-4 px-10">About Us</div>
-                <div class="w-fit py-4 px-10">How we work</div>
-                <div class="w-fit py-4 px-10">Contact us</div>
+                <a href="#" class="w-fit py-4 px-10 bg-figmayellow text-figmablack rounded-full">Home</a>
+                <a href="#" class="w-fit py-4 px-10">About Us</a>
+                <a href="#" class="w-fit py-4 px-10">How we work</a>
+                <a href="#" class="w-fit py-4 px-10">Contact us</a>
             </div>
             <button class="btn-outline ml-6 py-3 px-8 border-figmablack border rounded-full" data-target="sign-in">Sign In</button>
         </nav>
         <nav class="z-30 relative bg-figmablack lg:hidden">
             <div class="py-4 px-8 w-full flex justify-between ">
-                <button class="btn-outline py-3 px-8 border-figmawhite text-white border rounded-full">Sign In</button>
+                <button class="btn-outline py-3 px-8 border-figmawhite text-white border rounded-full" data-target="sign-in">Sign In</button>
                 <button><img src="../assets/images/nav-icon.svg" alt=""></button>
             </div>
         </nav>
@@ -369,11 +369,21 @@
                     <img src="../assets/images/about/banner-bottom.svg" alt="">
                     <div class="bg-figmawhite absolute flex py-2 px-6 rounded-full gap-4"
                         style="right: 5%; bottom: 20%;">
-                        <img src="../assets/images/about/socials/ic_baseline-telegram.svg" alt="">
-                        <img src="../assets/images/about/socials/teenyicons_instagram-solid.svg" alt="">
-                        <img src="../assets/images/about/socials/teenyicons_instagram-solid-1.svg" alt="">
-                        <img src="../assets/images/about/socials/ri_whatsapp-fill.svg" alt="">
-                        <img src="../assets/images/about/socials/mdi_linkedin.svg" alt="">
+                        <a href="#">
+                            <img src="../assets/images/about/socials/ic_baseline-telegram.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../assets/images/about/socials/teenyicons_instagram-solid.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../assets/images/about/socials/teenyicons_instagram-solid-1.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../assets/images/about/socials/ri_whatsapp-fill.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../assets/images/about/socials/mdi_linkedin.svg" alt="">
+                        </a>
                     </div>
                 </div>
 
@@ -578,13 +588,14 @@
                         <div class="text-left lg:text-right w-full lg:w-1/2">
                             <h4 class="text-xl lg:text-3xl text-figmawhite">Contact Us</h4>
                             <div class="mt-4 lg:mt-8 relative">
-                                <input type="text"
-                                    class="px-8 py-4 w-full max-w-96 max-h-14 bg-figmawhite text-figmabrown rounded-full placeholder-figmabrown"
-                                    placeholder="Email">
-                                <button
-                                    class="bg-figmablack h-14 absolute w-14 right-0 text-center text-white rounded-full"><img
-                                        src="../assets/images/icons/ion_arrow-up-sharp.svg" class="text-center mx-auto"
-                                        alt=""></button>
+                                <form action="">
+                                    <input type="text"
+                                        class="px-8 py-4 w-full max-w-96 max-h-14 bg-figmawhite text-figmabrown rounded-full placeholder-figmabrown"
+                                        placeholder="Email">
+                                    <button class="bg-figmablack h-14 absolute w-14 right-0 text-center text-white rounded-full" type="submit">
+                                        <img src="../assets/images/icons/ion_arrow-up-sharp.svg" class="text-center mx-auto" alt="">
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -602,7 +613,7 @@
                 <div>Accessibility Resources</div>
                 <div>Special Needs Travel Tips</div>
             </div>
-            <div class="flex space-x-6 absolute right-8 -top-5 lg:relative">
+            <div class="flex space-x-6 absolute right-8 -top-5 lg:relative z-30">
                 <button class="w-14 h-14 rounded-full bg-figmayellow">
                     <img src="../assets/images/icons/oui_accessibility.svg" class="mx-auto" alt="">
                 </button>
