@@ -15,12 +15,12 @@
     <div class="overflow-hidden relative">
 
 
-        <!-- Jack Bot Chat Modal -->
         <div class="absolute w-full h-screen bg-figmablack bg-opacity-45 z-40">
-            <div class="bg-figmawhite max-w-4xl absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-10 lg:w-3/4 rounded-3xl">
+            <!-- Jack Bot Chat Modal -->
+            <div class="hidden bg-figmawhite max-w-4xl absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-10 lg:w-3/4 rounded-3xl">
                 <div class="flex items-center w-full justify-between">
                     <h3 class="text-3xl text-figmablack"><b>Jack</b> Bot</h3>
-                    <button class="btn-outline py-3 px-8 bg-figmablack text-white border rounded-full">Clear chat</button>
+                    <button class="btn-outline py-3 px-8 bg-figmablack text-figmawhite border rounded-full">Clear chat</button>
                 </div>
 
 
@@ -65,8 +65,66 @@
 
 
                 <div class="mt-4 lg:mt-8 relative">
-                    <input type="text" class="px-8 py-4 w-full max-h-14 border border-figmayellow bg-figmawhite text-figmabrown rounded-full" placeholder="Enter your message...">
-                    <button class="bg-figmayellow h-14 absolute w-14 right-0 text-center text-white rounded-full"><img src="../assets/images/icons/arrow-black.svg" class="text-center mx-auto" alt=""></button>
+                    <input type="text" class="px-8 py-4 w-full max-h-14 border border-figmayellow bg-figmawhite text-figmabrown rounded-full placeholder-figmabrown" placeholder="Enter your message...">
+                    <button class="bg-figmayellow h-14 absolute w-14 right-0 text-center text-figmawhite rounded-full"><img src="../assets/images/icons/arrow-black.svg" class="text-center mx-auto" alt=""></button>
+                </div>
+
+            </div>
+
+
+
+            <!-- Sign In Modal -->
+            <div class="bg-figmawhite max-w-4xl absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-10 lg:w-96 rounded-3xl">
+
+                <div class="flex items-center w-full justify-center ">
+                    <h3 class="text-3xl text-figmablack"><b>Sign</b> In</h3>
+                </div>
+
+
+                <div class="mt-8">
+                    <form action="">
+                        <div class="flex flex-col gap-4">
+                            <input type="text" class="px-8 py-4 w-full max-h-14 border border-figmayellow bg-figmawhite text-figmabrown rounded-full placeholder-figmabrown" placeholder="Email*">
+                            <input type="text" class="px-8 py-4 w-full max-h-14 border border-figmayellow bg-figmawhite text-figmabrown rounded-full placeholder-figmabrown" placeholder="Password*">
+                            <div class="inline-flex items-start">
+                                    <label class="relative flex items-center p-2 rounded-full cursor-pointer" htmlFor="teal">
+                                        <input type="checkbox"
+                                            class="peer relative h-4 w-4 cursor-pointer appearance-none rounded-full border border-figmayellow transition-all checked:border-figmayellow checked:bg-figmayellow checked:before:bg-figmayellow hover:before:opacity-10"
+                                            id="teal" />
+                                        <span
+                                            class="absolute text-figmablack transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor"
+                                            stroke="currentColor" stroke-width="1">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <label class="text-figmabrown cursor-pointer select-none mt-1">
+                                        Keep me logged in - applies to all log in options below.
+                                    </label>
+                            </div>
+                        </div>
+                        <button class="btn-outline mt-8 py-4 px-8 w-full bg-figmayellow text-figmablack border rounded-full">Sign In</button>
+                    </form>
+                </div>
+                
+                <div class="mt-8">
+                    <div class="flex flex-col gap-4">
+                        <button class="btn-outline items-center flex justify-center text-lg py-4 px-8 w-full bg-figmabeigelight text-figmablack rounded-full">
+                            <img src="../assets/images/icons/google.svg" class="mr-4" alt="">
+                            Continue with Google
+                        </button>
+                        <button class="btn-outline items-center flex justify-center text-lg py-4 px-8 w-full bg-figmabeigelight text-figmablack rounded-full">
+                            <img src="../assets/images/icons/apple.svg" class="mr-4" alt="">
+                            Continue with Apple
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center text-figmablack text-sm">
+                    or <a class="underline text-figmared">Sign up</a> with another account
                 </div>
 
             </div>
@@ -376,7 +434,7 @@
                         <div class="text-left lg:text-right w-full lg:w-1/2">
                             <h4 class="text-xl lg:text-3xl text-figmawhite">Contact Us</h4>
                             <div class="mt-4 lg:mt-8 relative">
-                                <input type="text" class="px-8 py-4 w-full max-w-96 max-h-14 bg-figmawhite text-figmabrown rounded-full" placeholder="Email">
+                                <input type="text" class="px-8 py-4 w-full max-w-96 max-h-14 bg-figmawhite text-figmabrown rounded-full placeholder-figmabrown" placeholder="Email">
                                 <button class="bg-figmablack h-14 absolute w-14 right-0 text-center text-white rounded-full"><img src="../assets/images/icons/ion_arrow-up-sharp.svg" class="text-center mx-auto" alt=""></button>
                             </div>
                         </div>
