@@ -20,6 +20,9 @@ module.exports = {
         'screen-4xl': '1920px',
         'screen-5xl': '2240px',
       },
+      height: {
+        '50vh': '50vh'
+      }
     },
   },
   plugins: [],
