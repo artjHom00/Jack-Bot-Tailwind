@@ -7,13 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32,400,700&display=swap" rel="stylesheet">
     <link href="./output.css" rel="stylesheet">
 </head>
 
 <body class="bg-figmawhite max-w-screen-4xl mx-auto">
     <div class="overflow-hidden relative">
 
+        <div class="hidden z-30 absolute w-full min-h-screen bg-figmawhite" id="menu">
+            <div class="top-0 z-0 absolute left-0">
+                <img class="w-48 lg:w-full" src="../assets/images/hero/lines-hero.svg" alt="">
+            </div>
+            <div class="relative top-48 left-9 flex flex-col gap-4">
+                <h3 class="text-xl text-figmablack font-bold">Home</h3>
+                <p class="text-figmablack">About us</p>
+                <p class="text-figmablack">How we work</p>
+                <p class="text-figmablack">Contact us</p>
+            </div>
+            <div class="text-center flex flex-col items-center bottom-16 absolute left-1/2 -translate-x-1/2 w-full">
+                <div class="bg-figmablack text-figmawhite text-xl font-bold uppercase text-center w-fit">Ask jack anything</div>
+                <div class="bg-figmayellow text-figmablack text-xl font-bold uppercase text-center w-fit">to enhance your journey!</div>
+            </div>
+            <div class="absolute bottom-40 lg:-bottom-24 -right-0 z-40">
+                <img class="w-80" src="../assets/images/hero/plane-hero.svg" alt="">
+            </div>
+        </div>
 
         <div class="hidden z-20 absolute w-full min-h-screen bg-figmablack bg-opacity-45 mt-20 lg:mt-0" id="overlay">
 
@@ -254,7 +272,7 @@
         <nav class="z-30 relative bg-figmablack lg:hidden">
             <div class="py-4 px-8 w-full flex justify-between ">
                 <button class="btn-outline py-3 px-8 border-figmawhite text-white border rounded-full" data-target="sign-in">Sign In</button>
-                <button><img src="../assets/images/nav-icon.svg" alt=""></button>
+                <button><img src="../assets/images/nav-icon.svg" alt="" data-target="menu"></button>
             </div>
         </nav>
         <section class="hero text-center mt-16 relative">
@@ -633,6 +651,7 @@
 
     
     <script>
+        let menuOpened = false
         document.addEventListener('DOMContentLoaded', () => {
           // Function to show a modal
           function showModal(modalId) {
@@ -644,7 +663,7 @@
       
           // Function to hide all modals
           function hideAllModals() {
-            document.querySelectorAll('#jack-chat, #sign-in, #sign-up').forEach(modal => {
+            document.querySelectorAll('#menu, #jack-chat, #sign-in, #sign-up').forEach(modal => {
               modal.classList.add('hidden');
               document.getElementById('overlay').classList.add('hidden');
               document.body.style.overflow = 'initial'; 
@@ -654,9 +673,20 @@
           // Event listeners for buttons to open modals
           document.querySelectorAll('[data-target]').forEach(button => {
             button.addEventListener('click', () => {
-              hideAllModals(); // Hide any open modal
-              const modalId = button.getAttribute('data-target');
-              showModal(modalId); // Show the clicked modal
+                hideAllModals(); // Hide any open modal
+                const modalId = button.getAttribute('data-target');
+
+                if(modalId === 'menu') {
+                    if(!menuOpened) {
+                        menuOpened = !menuOpened
+                        return showModal(modalId)
+                    } else {
+                        menuOpened = !menuOpened
+                        return hideAllModals()
+                    }
+                }
+                
+                showModal(modalId); // Show the clicked modal
             });
           });
       

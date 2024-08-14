@@ -558,6 +558,10 @@ video {
   pointer-events: none;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -614,6 +618,42 @@ video {
   top: 50%;
 }
 
+.top-24 {
+  top: 6rem;
+}
+
+.top-64 {
+  top: 16rem;
+}
+
+.top-48 {
+  top: 12rem;
+}
+
+.left-9 {
+  left: 2.25rem;
+}
+
+.bottom-3\/4 {
+  bottom: 75%;
+}
+
+.bottom-96 {
+  bottom: 24rem;
+}
+
+.bottom-1\.5 {
+  bottom: 0.375rem;
+}
+
+.bottom-16 {
+  bottom: 4rem;
+}
+
+.bottom-40 {
+  bottom: 10rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -628,6 +668,14 @@ video {
 
 .z-30 {
   z-index: 30;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .order-last {
@@ -649,19 +697,14 @@ video {
   margin-right: auto;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.my-6 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .ml-6 {
@@ -815,6 +858,18 @@ video {
   width: max-content;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.w-72 {
+  width: 18rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -860,6 +915,11 @@ video {
 
 .-translate-y-2\/4 {
   --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-1\/2 {
+  --tw-translate-x: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1087,6 +1147,11 @@ video {
   background-color: rgb(241 172 29 / var(--tw-bg-opacity));
 }
 
+.bg-figmabeige {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 203 162 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-45 {
   --tw-bg-opacity: 0.45;
 }
@@ -1195,6 +1260,14 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .text-figmabeige2 {
