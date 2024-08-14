@@ -15,13 +15,13 @@
     <div class="overflow-hidden relative">
 
 
-        <div class=" z-20 absolute w-full min-h-screen bg-figmablack bg-opacity-45 mt-20 lg:mt-0" id="overlay">
+        <div class="hidden z-20 absolute w-full min-h-screen bg-figmablack bg-opacity-45 mt-20 lg:mt-0" id="overlay">
 
 
             <!-- Jack Bot Chat Modal -->
             <div class="hidden bg-figmawhite min-h-screen p-10 pt-0 rounded-none lg:min-h-fit w-full lg:max-w-4xl absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-3/4 lg:rounded-3xl" id="jack-chat">
                 
-                <div class="flex items-center gap-2 my-8">
+                <div class="flex items-center gap-2 my-8 cursor-pointer" id="back">
                     <img src="../assets/images/icons/arrow-left.svg" alt="">
                     <span>Back</span>
                 </div>
@@ -89,9 +89,9 @@
 
 
             <!-- Sign In Modal -->
-            <div class=" bg-figmawhite w-full min-h-screen p-10 pt-0 lg:min-h-fit rounded-none lg:max-w-4xl absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-96 lg:rounded-3xl" id="sign-in">
+            <div class="hidden bg-figmawhite w-full min-h-screen p-10 pt-0 lg:min-h-fit rounded-none lg:max-w-4xl absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-96 lg:rounded-3xl" id="sign-in">
                 
-                <div class="flex items-center gap-2 my-8">
+                <div class="flex items-center gap-2 my-8 cursor-pointer" id="back">
                     <img src="../assets/images/icons/arrow-left.svg" alt="">
                     <span>Back</span>
                 </div>
@@ -153,7 +153,7 @@
                 </div>
 
                 <div class="mt-8 text-center text-figmablack text-sm">
-                    or <a class="underline text-figmared">Sign up</a> with another account
+                    or <a class="underline text-figmared" data-target="sign-up">Sign up</a> with another account
                 </div>
 
             </div>
@@ -164,7 +164,7 @@
             <!-- Sign Up Modal -->
             <div class="hidden bg-figmawhite w-full min-h-screen p-10 pt-0 lg:min-h-fit rounded-none lg:max-w-4xl absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-96 lg:rounded-3xl" id="sign-up">
                 
-                <div class="flex items-center gap-2 my-8">
+                <div class="flex items-center gap-2 my-5 cursor-pointer" id="back">
                     <img src="../assets/images/icons/arrow-left.svg" alt="">
                     <span>Back</span>
                 </div>
@@ -211,7 +211,7 @@
                             </div>
                         </div>
                         <button
-                            class="btn-outline mt-8 py-4 px-8 w-full bg-figmayellow text-figmablack border rounded-full">Create
+                            class="btn-outline mt-4 py-4 px-8 w-full bg-figmayellow text-figmablack border rounded-full">Create
                             Account</button>
                     </form>
                 </div>
@@ -231,8 +231,8 @@
                     </div>
                 </div>
 
-                <div class="mt-8 text-center text-figmablack text-sm">
-                    or <a class="underline text-figmared">Sign In</a>
+                <div class="mt-4 text-center text-figmablack text-sm">
+                    or <a class="underline text-figmared" data-target="sign-in">Sign In</a>
                 </div>
 
             </div>
@@ -249,7 +249,7 @@
                 <div class="w-fit py-4 px-10">How we work</div>
                 <div class="w-fit py-4 px-10">Contact us</div>
             </div>
-            <button class="btn-outline ml-6 py-3 px-8 border-figmablack border rounded-full">Sign In</button>
+            <button class="btn-outline ml-6 py-3 px-8 border-figmablack border rounded-full" data-target="sign-in">Sign In</button>
         </nav>
         <nav class="z-30 relative bg-figmablack lg:hidden">
             <div class="py-4 px-8 w-full flex justify-between ">
@@ -265,7 +265,7 @@
             <p class="mx-auto max-w-60 lg:max-w-full xl:text-lg mt-4 text-figmabrown">Empowering Every Traveler:
                 <br>Accessible, Tailored Journeys for Special Needs
             </p>
-            <button class="text-lg bg-figmayellow px-8 py-3 mt-10 text-figmablack rounded-full">Plan your accessible
+            <button class="text-lg bg-figmayellow px-8 py-3 mt-10 text-figmablack rounded-full" data-target="jack-chat">Plan your accessible
                 trip now</button>
         </section>
         <section
@@ -619,9 +619,45 @@
         </div>
     </footer>
 
+
+    
     <script>
-        // here make the interactions
-    </script>
+        document.addEventListener('DOMContentLoaded', () => {
+          // Function to show a modal
+          function showModal(modalId) {
+            document.getElementById('overlay').classList.remove('hidden');
+            document.getElementById(modalId).classList.remove('hidden');
+            window.scrollTo(0, 0); // Scroll to top
+            document.body.style.overflow = 'hidden'; 
+          }
+      
+          // Function to hide all modals
+          function hideAllModals() {
+            document.querySelectorAll('#jack-chat, #sign-in, #sign-up').forEach(modal => {
+              modal.classList.add('hidden');
+              document.getElementById('overlay').classList.add('hidden');
+              document.body.style.overflow = 'initial'; 
+            });
+          }
+      
+          // Event listeners for buttons to open modals
+          document.querySelectorAll('[data-target]').forEach(button => {
+            button.addEventListener('click', () => {
+              hideAllModals(); // Hide any open modal
+              const modalId = button.getAttribute('data-target');
+              showModal(modalId); // Show the clicked modal
+            });
+          });
+      
+          // Event listener for 'Back' buttons to close modals
+          document.querySelectorAll('#back').forEach(backButton => {
+            backButton.addEventListener('click', () => {
+              hideAllModals(); // Close modal
+            });
+          });
+        });
+      </script>
+      
 </body>
 
 </html>
