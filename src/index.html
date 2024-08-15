@@ -663,7 +663,6 @@
             if(modalId !== 'menu') document.getElementById('overlay').classList.remove('hidden');
             document.getElementById(modalId).classList.remove('hidden');
             window.scrollTo(0, 0); // Scroll to top
-            document.body.style.overflow = 'hidden'; 
           }
           
       
@@ -672,7 +671,6 @@
             document.querySelectorAll('#menu, #jack-chat, #sign-in, #sign-up').forEach(modal => {
               modal.classList.add('hidden');
               document.getElementById('overlay').classList.add('hidden');
-              document.body.style.overflow = 'initial'; 
             });
           }
       
