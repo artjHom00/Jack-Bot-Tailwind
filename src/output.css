@@ -1606,6 +1606,10 @@ body, * {
     margin-right: 3.5rem;
   }
 
+  .xl\:mt-20 {
+    margin-top: 5rem;
+  }
+
   .xl\:block {
     display: block;
   }
@@ -1640,6 +1644,10 @@ body, * {
 
   .xl\:pt-14 {
     padding-top: 3.5rem;
+  }
+
+  .xl\:pt-36 {
+    padding-top: 9rem;
   }
 
   .xl\:text-6xl {
