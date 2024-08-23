@@ -1358,14 +1358,6 @@ body, * {
 }
 
 @media (min-width: 768px) {
-  .md\:block {
-    display: block;
-  }
-
-  .md\:hidden {
-    display: none;
-  }
-
   .md\:gap-8 {
     gap: 2rem;
   }
@@ -1412,10 +1404,6 @@ body, * {
 
   .lg\:mt-14 {
     margin-top: 3.5rem;
-  }
-
-  .lg\:mt-20 {
-    margin-top: 5rem;
   }
 
   .lg\:mt-32 {
@@ -1547,11 +1535,6 @@ body, * {
     border-radius: 1.5rem;
   }
 
-  .lg\:bg-figmabeige {
-    --tw-bg-opacity: 1;
-    background-color: rgb(240 203 162 / var(--tw-bg-opacity));
-  }
-
   .lg\:p-14 {
     padding: 3.5rem;
   }
@@ -1564,10 +1547,6 @@ body, * {
   .lg\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
-  }
-
-  .lg\:pt-36 {
-    padding-top: 9rem;
   }
 
   .lg\:text-right {
