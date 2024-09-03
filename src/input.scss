@@ -29,6 +29,28 @@ body, * {
     box-shadow: 24px 22px 0px 0px rgba(82,67,63,1);
 }
 
+.slick-slider {
+    height: 160px;
+}
+.slick-dots {
+    position: absolute;
+    padding-top: 30px;
+    & > li {
+        margin: 0 5px;
+        width: 13px;
+        height: 13px;
+        background-color: #F3E6D8;
+        border-radius: 10px;
+        &.slick-active {
+            background-color: #F1AC1D;
+    
+        } 
+        & > button::before {
+            font-size: 0;
+        }
+    }
+}
+
 @media(max-width: 1024px) {
     
     .testimonial {

@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
     <link href="./output.css" rel="stylesheet">
 
 </head>
@@ -304,35 +306,37 @@
                     <img src="./assets/images/jack-m.png" class="w-full" alt="">
                     <div class="tips-mobile mt-10">
                         <h3 class="text-figmablack text-3xl text-left">Tips</h3>
-                        <div class="mt-6 flex flex-col gap-4">
-                            <div class="bg-figmabeigelight bg-opacity-80 p-6 rounded-2xl">
+                        <div class="mt-4" id="tips">
+                            <div class="bg-figmabeigelight bg-opacity-80 p-6 rounded-2xl h-40">
                                 <h4 class="2xl:text-2xl text-figmablack">Planning Your Trip</h4>
                                 <p class="mt-4 2xl:text-lg text-figmabrown">"I'm planning a trip to Rome from July 15th
                                     to
                                     July 20th. Can you suggest accessible accommodations and must-see attractions?"</p>
                             </div>
-                            <div class="bg-figmabeigelight bg-opacity-80 p-6 rounded-2xl">
+                            <div class="bg-figmabeigelight bg-opacity-80 p-6 rounded-2xl h-40">
                                 <h4 class="2xl:text-2xl text-figmablack">Booking and Payment</h4>
                                 <p class="mt-4 2xl:text-lg text-figmabrown">"Can you book a round-trip flight from San
                                     Francisco to Tokyo for me?"</p>
                             </div>
-                            <div class="bg-figmabeigelight bg-opacity-80 p-6 rounded-2xl">
+                            <div class="bg-figmabeigelight bg-opacity-80 p-6 rounded-2xl h-40">
                                 <h4 class="2xl:text-2xl text-figmablack">Emergency Support</h4>
                                 <p class="mt-4 2xl:text-lg text-figmabrown">"I lost my passport in London. What should I
                                     do?"</p>
                             </div>
-                            <div class="bg-figmabeigelight bg-opacity-80 p-6 rounded-2xl">
+                            <div class="bg-figmabeigelight bg-opacity-80 p-6 rounded-2xl h-40">
                                 <h4 class="2xl:text-2xl text-figmablack">Navigation</h4>
                                 <p class="mt-4 2xl:text-lg text-figmabrown">"Can you provide walking directions from my
                                     hotel to the Colosseum?"
                                     "What's the best way to get from JFK Airport to Manhattan using public transit?"</p>
                             </div>
-                            <div class="bg-figmabeigelight bg-opacity-80 p-6 rounded-2xl">
+                            <div class="bg-figmabeigelight bg-opacity-80 p-6 rounded-2xl h-40">
+                                <h4></h4>
                                 <p class="2xl:text-lg text-figmabrown">"I'm visually impaired and need assistance
                                     finding
                                     guided tours in London that cater to my needs. Can you help?"</p>
                             </div>
-                            <div class="bg-figmabeigelight bg-opacity-80 p-6 rounded-2xl">
+                            <div class="bg-figmabeigelight bg-opacity-80 p-6 rounded-2xl h-40">
+                                <h4></h4>
                                 <p class="2xl:text-lg text-figmabrown">"I have mobility challenges and I'm planning a
                                     trip
                                     to the Grand Canyon. Can you recommend accessible viewpoints and trails?"</p>
@@ -432,9 +436,9 @@
                     </div>
                     <div class="block lg:hidden relative">
                         <img src="./assets/images/about/hand-phone.svg" class="block lg:hidden absolute"
-                        style="right: 30.9%; top: 51.5%; width: 3%; z-index:3000" alt="">
+                            style="right: 30.9%; top: 51.5%; width: 3%; z-index:3000" alt="">
                         <img src="./assets/images/about/phone-screen.png" class="block lg:hidden absolute"
-                        style="right: 18.2%; top: 37.5%; width: 15%;" alt="">
+                            style="right: 18.2%; top: 37.5%; width: 15%;" alt="">
                         <img src="./assets/images/about/banner-bottom-m.svg" class="w-full" alt="">
                         <div class="bg-figmawhite absolute flex py-2 px-6 rounded-full gap-4 w-max"
                             style="left: 50%; bottom: 20%; transform: translateX(-50%)">
@@ -689,97 +693,171 @@
         </div>
     </div>
 
-
-
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/slick.js"></script>
     <script>
-document.addEventListener('DOMContentLoaded', () => {
-  let menuOpened = false;
+        document.addEventListener('DOMContentLoaded', () => {
+            let menuOpened = false;
+            let timeOut;
+            let headingTypedString;
+            let paragraphTypedString;
 
-  // Function to check if screen width is less than 1024px
-  function isSmallScreen() {
-    return window.innerWidth < 1024;
-  }
+            const slickAnimation = $('#tips').slick({
+                arrows: false,
+                dots: true,
+                slidesToScroll: 1,
+            });
 
-  // Function to show the overlay and manage content visibility based on screen size
-  function showOverlay() {
-    document.getElementById('overlay').classList.remove('hidden');
-    
-    if (isSmallScreen()) {
-        document.getElementById('content').classList.add('hidden');
-    } else {
-        document.body.style.overflow = 'hidden';
-    }
-    
-    window.scrollTo(0, 0); // Scroll to top
-  }
+            startAutoPlay()
 
-  // Function to hide the overlay and reset content visibility
-  function hideOverlay() {
-    document.getElementById('overlay').classList.add('hidden');
-    document.body.style.overflow = 'initial';
-    
-    if (isSmallScreen()) {
-      document.getElementById('content').classList.remove('hidden');
-    } else {
-        document.body.style.overflow = 'initial';
-    }
-  }
+            function startAutoPlay() {
+                // Clear existing timeout if any
+                if (timeOut) {
+                    clearTimeout(timeOut);
+                    timeOut = null;
+                }
+                // Start a new timeout to move to the next slide
+                timeOut = setTimeout(() => {
+                    $('#tips').slick('slickNext');
+                }, 4000); // 4 seconds delay after Typed.js animation is complete
+            }
+            
 
-  // Function to show a specific modal
-  function showModal(modalId) {
-    if (modalId !== 'menu') showOverlay();
-    document.getElementById(modalId).classList.remove('hidden');
-  }
+            $('#tips').on('beforeChange', (event, slick, currentSlide, nextSlide) => {
+                const nextSlideElement = $(slick.$slides[nextSlide]);
 
-  // Function to hide a specific modal
-  function hideModal(modalId) {
-    document.getElementById(modalId).classList.add('hidden');
-    hideOverlay();
-  }
+                // Extract text from h4 and p elements within the next slide
+                headingTypedString = nextSlideElement.find('h4').text();
+                paragraphTypedString = nextSlideElement.find('p').text();
 
-  // Function to hide all modals
-  function hideAllModals() {
-    document.querySelectorAll('#menu, #jack-chat, #sign-in, #sign-up').forEach(modal => {
-      hideModal(modal.id);
-    });
-  }
+                // Empty the h4 and p elements within the next slide
+                nextSlideElement.find('h4').empty();
+                nextSlideElement.find('p').empty();
 
-  // Function to toggle the menu visibility
-  function toggleMenu() {
-    if (!menuOpened) {
-      menuOpened = true;
-      if (isSmallScreen()) {
-        document.getElementById('content').classList.add('hidden');
-      }
-      showModal('menu');
-    } else {
-      menuOpened = false;
-      if (isSmallScreen()) {
-        document.getElementById('content').classList.remove('hidden');
-      }
-      hideModal('menu');
-    }
-  }
+                // Clear any existing timeout
+                if (timeOut) {
+                    clearTimeout(timeOut);
+                    timeOut = null;
+                }
+            });
 
-  // Event listener for buttons to open modals
-  document.querySelectorAll('[data-target]').forEach(button => {
-    button.addEventListener('click', () => {
-      hideAllModals(); // Hide any open modal
-      const modalId = button.getAttribute('data-target');
-      if (modalId === 'menu') {
-        toggleMenu();
-      } else {
-        showModal(modalId); // Show the clicked modal
-      }
-    });
-  });
+            $('#tips').on('afterChange', (event, slick, currentSlide) => {
+                const activeSlide = $(slick.$slides[currentSlide]);
 
-  // Event listener for 'Back' buttons to close modals
-  document.querySelectorAll('#back').forEach(backButton => {
-    backButton.addEventListener('click', hideAllModals); // Close all modals
-  });
-});
+                const defaultTypedAnimationSettings = {
+                    showCursor: false,
+                    typeSpeed: 15,
+                };
 
+                new Typed(activeSlide.find('h4')[0], {
+                    strings: [headingTypedString],
+                    ...defaultTypedAnimationSettings,
+                });
+
+                new Typed(activeSlide.find('p')[0], {
+                    strings: [paragraphTypedString],
+                    ...defaultTypedAnimationSettings,
+                    onComplete: () => {
+                        startAutoPlay(); // Start autoplay after Typed.js animation is complete
+                    }
+                });
+            });
+
+            // Reset autoplay when pagination dots are clicked
+            $('.slick-dots li button').on('click', () => {
+                if (timeOut) {
+                    clearTimeout(timeOut);
+                    timeOut = null;
+                }
+                startAutoPlay();
+            });
+
+            // Function to check if screen width is less than 1024px
+            function isSmallScreen() {
+                return window.innerWidth < 1024;
+            }
+
+            // Function to show the overlay and manage content visibility based on screen size
+            function showOverlay() {
+                document.getElementById('overlay').classList.remove('hidden');
+
+                if (isSmallScreen()) {
+                    document.getElementById('content').classList.add('hidden');
+                } else {
+                    document.body.style.overflow = 'hidden';
+                }
+
+                window.scrollTo(0, 0); // Scroll to top
+            }
+
+            // Function to hide the overlay and reset content visibility
+            function hideOverlay() {
+                document.getElementById('overlay').classList.add('hidden');
+                document.body.style.overflow = 'initial';
+
+                if (isSmallScreen()) {
+                    document.getElementById('content').classList.remove('hidden');
+                } else {
+                    document.body.style.overflow = 'initial';
+                }
+            }
+
+            // Function to show a specific modal
+            function showModal(modalId) {
+                if (modalId !== 'menu') showOverlay();
+                document.getElementById(modalId).classList.remove('hidden');
+            }
+
+            // Function to hide a specific modal
+            function hideModal(modalId) {
+                document.getElementById(modalId).classList.add('hidden');
+                hideOverlay();
+            }
+
+            // Function to hide all modals
+            function hideAllModals() {
+                document.querySelectorAll('#menu, #jack-chat, #sign-in, #sign-up').forEach(modal => {
+                    hideModal(modal.id);
+                });
+            }
+
+            // Function to toggle the menu visibility
+            function toggleMenu() {
+                if (!menuOpened) {
+                    menuOpened = true;
+                    if (isSmallScreen()) {
+                        document.getElementById('content').classList.add('hidden');
+                    }
+                    showModal('menu');
+                } else {
+                    menuOpened = false;
+                    if (isSmallScreen()) {
+                        document.getElementById('content').classList.remove('hidden');
+                    }
+                    hideModal('menu');
+                }
+            }
+
+            // Event listener for buttons to open modals
+            document.querySelectorAll('[data-target]').forEach(button => {
+                button.addEventListener('click', () => {
+                    hideAllModals(); // Hide any open modal
+                    const modalId = button.getAttribute('data-target');
+                    if (modalId === 'menu') {
+                        toggleMenu();
+                    } else {
+                        showModal(modalId); // Show the clicked modal
+                    }
+                });
+            });
+
+            // Event listener for 'Back' buttons to close modals
+            document.querySelectorAll('#back').forEach(backButton => {
+                backButton.addEventListener('click', hideAllModals); // Close all modals
+            });
+        });
     </script>
 
 </body>
